@@ -1,44 +1,126 @@
+@import url(fonts.css);
+@import url(../fonts/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css);
+
+
+@mixin max-screen($res) {
+  @media screen and (max-width: $res) {
+    @content;
+  }
+}
+
+
+//HEADER
 header {
-  background: url("../images/nav_bg.png") top center no-repeat;
-  background-size: cover;
+  background: url("../images/header_bg.jpg") top center no-repeat;
+  background-size: 100%;
   position: relative;
   z-index: 2;
+  background-color: #c11915;
+
+  &:after {
+    content: "";
+    display: block;
+    background: url("../images/header_bg-down.png") top center no-repeat;
+    background-size: 100%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
 
   .navbar {
-    padding: 37px 33px 18px;
+    padding: 40px 30px 10px;
+
     .navbar-brand {
-      max-width: 250px;
+      max-width: 230px;
       padding: 0;
+      @include max-screen(1199px) {
+        max-width: 205px;
+      }
+      @include max-screen(767px) {
+        max-width: 160px;
+      }
       img {
         width: 100%;
       }
     }
+
     .navbar-collapse {
       .navbar-nav {
         .nav-item {
-          margin-left: 50px;
-          margin-bottom: 5px;
+          margin: 10px 0 5px 50px;
+          @include max-screen(1199px) {
+            margin-left: 30px;
+          }
+          @include max-screen(991px) {
+            margin: 0 13%;
+          }
+          @include max-screen(767px) {
+            &:first-of-type {
+              margin-top: 30px;
+            }
+          }
           .nav-link {
             color: #fff;
             opacity: 0.7;
             font-family: "Sitka Small";
             font-weight: 700;
-            padding: 8px 0 0;
+            font-size: 15px;
+            padding: 0;
+            transition: 0.5s;
+            @include max-screen(1199px) {
+              font-size: 13px;
+            }
+            @include max-screen(991px) {
+              text-align: center;
+              padding: 5px 0;
+              border-bottom: 2px dotted #fff;
+            }
           }
+
+          &:after {
+            content: "";
+            display: block;
+            width: 0;
+            height: 4px;
+            background-color: #fff;
+            transition: 0.5s ease-in-out;
+            @include max-screen(991px) {
+              display: none;
+            }
+          }
+
           &.active, &:hover {
             .nav-link {
               opacity: 1;
+              transition: 0.4s;
+            }
+
+            &:after {
+              width: 100%;
+              transition: 0.4s ease-in-out;
             }
           }
+
           &:last-of-type {
+            margin-top: 5px;
+
+            &:after {
+              display: none;
+            }
+
             .nav-link {
-              max-width: 100px;
-              padding: 0 20px 0 0;
+              max-width: 120px;
               position: relative;
+              opacity: 1;
+              @include max-screen(1199px) {
+                max-width: 110px;
+              }
+
               img {
-                width: 100%;
+                width: 80%;
                 display: inline-block;
               }
+
               &:after {
                 content: "\f39e";
                 display: inline-block;
@@ -47,6 +129,12 @@ header {
                 color: white;
                 position: absolute;
                 right: 0;
+                font-size: 23px;
+                line-height: 23px;
+                @include max-screen(1199px) {
+                  font-size: 20px;
+                  line-height: 20px;
+                }
               }
             }
           }
@@ -55,23 +143,29 @@ header {
     }
   }
 }
+
+//BANNER
 .banner {
   position: relative;
   z-index: 1;
-  top: -1px;
+  top: -20px;
+
   .position-absolute {
     top: 100px;
   }
-  .container{
+
+  .container {
     .row {
       .col-md-6 {
         .banner-logo {
           max-width: 470px;
+
           img {
             width: 100%;
             margin-bottom: 65px;
           }
         }
+
         .banner-button {
           text-decoration: none;
           color: #fff;
@@ -92,6 +186,7 @@ footer {
   color: white;
   padding-top: 100px;
   padding-bottom: 70px;
+
   .footer-el {
     h3 {
       font-family: "Great Vibes";
@@ -99,22 +194,27 @@ footer {
       font-size: 80px;
       color: #ff5656;
     }
+
     h4 {
       font-family: "Source Sans Pro";
       font-family: normal;
       font-size: 12px;
     }
+
     .timework {
       span {
         min-width: 31px;
         display: inline-block;
       }
     }
+
     &:last-child {
       border-left: 3px #ffffff dotted;
+
       li {
         padding-top: 15px;
         padding-left: 30px;
+
         a {
           color: white;
           text-decoration: none;
