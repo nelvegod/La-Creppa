@@ -313,8 +313,8 @@ header .navbar-collapse .navbar-nav .nav-item:last-of-type .nav-link:after {
 }
 
 .specials {
-  padding: 55px 0 75px;
   background: url("../images/specials-bg.jpg") center/cover no-repeat;
+  padding: 55px 0 75px;
 }
 @media screen and (max-width: 767px) {
   .specials {
@@ -338,21 +338,31 @@ header .navbar-collapse .navbar-nav .nav-item:last-of-type .nav-link:after {
     justify-content: flex-start;
     align-items: center;
   }
-  .specials .spec-item:first-of-type .spec-item_title, .specials .spec-item:last-of-type .spec-item_title {
+  .specials .spec-item:first-of-type .spec-item_title {
     position: relative;
-    top: 39px;
-    right: 3px;
+    bottom: 15px;
   }
   .specials .spec-item:nth-child(2) {
     flex-direction: row-reverse;
-  }
-  .specials .spec-item:nth-child(2) .spec-item_title {
     position: relative;
-    top: 39px;
-    left: 3px;
+    right: 9%;
+  }
+  .specials .spec-item:nth-child(2) .spec-item_inner {
+    margin-left: 3px;
+  }
+  .specials .spec-item:last-of-type .spec-item_title {
+    position: relative;
+    top: 15px;
+  }
+  .specials .spec-item:first-of-type, .specials .spec-item:last-of-type {
+    position: relative;
+    left: 9%;
+  }
+  .specials .spec-item:first-of-type .spec-item_inner, .specials .spec-item:last-of-type .spec-item_inner {
+    margin-right: 3px;
   }
   .specials .spec-item:nth-child(2), .specials .spec-item:last-of-type {
-    margin-top: -40px;
+    margin-top: -30px;
   }
 }
 .specials .spec-item a {
@@ -389,8 +399,8 @@ header .navbar-collapse .navbar-nav .nav-item:last-of-type .nav-link:after {
 }
 @media screen and (max-width: 575px) {
   .specials .spec-item a:first-of-type {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-width: 2px;
     margin: 0;
   }

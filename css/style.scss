@@ -46,7 +46,7 @@
 
 //HEADER
 header {
-  background: #c11915  url("../images/header_bg.jpg") top center/100% no-repeat;
+  background: #c11915 url("../images/header_bg.jpg") top center/100% no-repeat;
   position: relative;
   z-index: 2;
 
@@ -298,6 +298,7 @@ header {
 
 //SPECIALS
 .specials {
+  background: url('../images/specials-bg.jpg') center/cover no-repeat;
   padding: 55px 0 75px;
   @include max-screen(767px) {
     padding: 40px 0 40px;
@@ -305,7 +306,7 @@ header {
   @include max-screen(575px) {
     padding: 20px 0;
   }
-  background: url('../images/specials-bg.jpg') center/cover no-repeat;
+
   .spec-item {
     @include max-screen(767px) {
       margin-bottom: 20px;
@@ -315,27 +316,40 @@ header {
       display: flex;
       justify-content: flex-start;
       align-items: center;
-      &:first-of-type,
-      &:last-of-type {
+      &:first-of-type {
         .spec-item_title {
           position: relative;
-          top: 39px;
-          right: 3px;
+          bottom: 15px;
         }
       }
       &:nth-child(2) {
         flex-direction: row-reverse;
+        position: relative;
+        right: 9%;
+        .spec-item_inner {
+          margin-left: 3px;
+        }
+      }
+      &:last-of-type {
         .spec-item_title {
           position: relative;
-          top: 39px;
-          left: 3px;
+          top: 15px;
+        }
+      }
+      &:first-of-type,
+      &:last-of-type {
+        position: relative;
+        left: 9%;
+        .spec-item_inner {
+          margin-right: 3px;
         }
       }
       &:nth-child(2),
       &:last-of-type {
-        margin-top: -40px;
+        margin-top: -30px;
       }
     }
+
     a {
       display: block;
       color: #ffffff;
@@ -347,6 +361,7 @@ header {
       @include max-screen(575px) {
         font-size: 16px;
       }
+
       &:first-of-type {
         width: 200px;
         height: 200px;
@@ -363,12 +378,13 @@ header {
           border-width: 3px;
         }
         @include max-screen(575px) {
-          width: 100px;
-          height: 100px;
+          width: 90px;
+          height: 90px;
           border-width: 2px;
           margin: 0;
         }
       }
+
       img {
         width: 100%;
       }
@@ -380,6 +396,7 @@ header {
 .wine {
   background: url('../images/bring-block-bg.jpg') center center/cover no-repeat;
   padding: 10% 0;
+
   .wine-text {
     display: inline-block;
     color: #ffffff;
@@ -415,6 +432,7 @@ header {
       border-radius: 2px;
       font-size: 8px;
     }
+
     &:after {
       position: absolute;
       content: "";
@@ -464,6 +482,7 @@ header {
   @include max-screen(575px) {
     padding: 20px 0;
   }
+
   h3 {
     font-size: 30px;
     color: #ab1612;
@@ -477,6 +496,7 @@ header {
       margin-bottom: 7px;
     }
   }
+
   p {
     font-size: 18px;
     margin: 0 0 15px 0;
@@ -489,6 +509,7 @@ header {
       margin-bottom: 7px;
     }
   }
+
   input {
     width: 66%;
     display: inline-block;
@@ -515,6 +536,7 @@ header {
       min-width: 200px;
     }
   }
+
   button {
     width: 33%;
     display: inline-block;
