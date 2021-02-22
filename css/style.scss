@@ -1,13 +1,11 @@
 @import url(fonts.css);
 @import url(../fonts/fontawesome-free-5.0.8/web-fonts-with-css/css/fontawesome-all.min.css);
 
-
 @mixin max-screen($res) {
   @media screen and (max-width: $res) {
     @content;
   }
 }
-
 
 //COLLAPSE ICON
 .navbar-toggler {
@@ -46,10 +44,9 @@
   }
 }
 
-
 //HEADER
 header {
-  background: url("../images/header_bg.jpg") #c11915 top center/100% no-repeat;
+  background: #c11915  url("../images/header_bg.jpg") top center/100% no-repeat;
   position: relative;
   z-index: 2;
 
@@ -200,7 +197,6 @@ header {
   }
 }
 
-
 //BANNER
 .banner {
   position: relative;
@@ -299,6 +295,80 @@ header {
     }
   }
 }
+
+//WINE
+.wine {
+  background: url('../images/bring-block-bg.jpg') center center/cover no-repeat;
+  padding: 8% 0;
+  .wine-text {
+    display: inline-block;
+    color: #ffffff;
+    font-family: ModernoFB;
+    font-weight: 400;
+    font-size: 56px;
+    border: 1px solid #b5aba885;
+    line-height: 0.7;
+    letter-spacing: 5px;
+    padding: 10px 0px 4px 4px;
+    border-radius: 8px;
+    margin: 0;
+    position: relative;
+    @include max-screen(1199px) {
+      font-size: 32px;
+      border-radius: 5px;
+    }
+    @include max-screen(991px) {
+      font-size: 29px;
+      padding-top: 8px;
+      border-radius: 4px;
+      letter-spacing: 4px;
+      padding-left: 3px;
+    }
+    @include max-screen(767px) {
+      font-size: 18px;
+      letter-spacing: 3px;
+      padding-top: 6px;
+    }
+    @include max-screen(575px) {
+      padding-top: 4px;
+      padding-left: 2px;
+      border-radius: 2px;
+      font-size: 8px;
+    }
+    &:after {
+      position: absolute;
+      content: "";
+      display: block;
+      border: 1px solid #b5aba885;
+      width: 102.5%;
+      height: 123%;
+      top: -6px;
+      left: -9px;
+      @include max-screen(1199px) {
+        left: -7px;
+        height: 121%;
+        top: -4px;
+        width: 103%;
+      }
+      @include max-screen(991px) {
+        left: -5px;
+        top: -4px;
+        height: 124%;
+        width: 102.5%;
+      }
+      @include max-screen(767px) {
+        left: -4px;
+        top: -3px;
+        height: 127%;
+        width: 103%;
+      }
+      @include max-screen(575px) {
+        display: none;
+      }
+    }
+  }
+}
+
 
 
 //FOOTER

@@ -31,7 +31,7 @@
 }
 
 header {
-  background: url("../images/header_bg.jpg") #c11915 top center/100% no-repeat;
+  background: #c11915 url("../images/header_bg.jpg") top center/100% no-repeat;
   position: relative;
   z-index: 2;
 }
@@ -308,6 +308,94 @@ header .navbar-collapse .navbar-nav .nav-item:last-of-type .nav-link:after {
 }
 @media screen and (max-width: 575px) {
   .banner .banner_els .banner_inner p {
+    display: none;
+  }
+}
+
+.wine {
+  background: url("../images/bring-block-bg.jpg") center center/cover no-repeat;
+  padding: 8% 0;
+}
+.wine .wine-text {
+  display: inline-block;
+  color: #ffffff;
+  font-family: ModernoFB;
+  font-weight: 400;
+  font-size: 56px;
+  border: 1px solid #b5aba885;
+  line-height: 0.7;
+  letter-spacing: 5px;
+  padding: 10px 0px 4px 4px;
+  border-radius: 8px;
+  margin: 0;
+  position: relative;
+}
+@media screen and (max-width: 1199px) {
+  .wine .wine-text {
+    font-size: 32px;
+    border-radius: 5px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .wine .wine-text {
+    font-size: 29px;
+    padding-top: 8px;
+    border-radius: 4px;
+    letter-spacing: 4px;
+    padding-left: 3px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wine .wine-text {
+    font-size: 18px;
+    letter-spacing: 3px;
+    padding-top: 6px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .wine .wine-text {
+    padding-top: 4px;
+    padding-left: 2px;
+    border-radius: 2px;
+    font-size: 8px;
+  }
+}
+.wine .wine-text:after {
+  position: absolute;
+  content: "";
+  display: block;
+  border: 1px solid #b5aba885;
+  width: 102.5%;
+  height: 123%;
+  top: -6px;
+  left: -9px;
+}
+@media screen and (max-width: 1199px) {
+  .wine .wine-text:after {
+    left: -7px;
+    height: 121%;
+    top: -4px;
+    width: 103%;
+  }
+}
+@media screen and (max-width: 991px) {
+  .wine .wine-text:after {
+    left: -5px;
+    top: -4px;
+    height: 124%;
+    width: 102.5%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wine .wine-text:after {
+    left: -4px;
+    top: -3px;
+    height: 127%;
+    width: 103%;
+  }
+}
+@media screen and (max-width: 575px) {
+  .wine .wine-text:after {
     display: none;
   }
 }
