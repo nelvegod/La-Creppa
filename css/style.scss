@@ -296,10 +296,49 @@ header {
   }
 }
 
+//SPECIALS
+.specials {
+  padding: 55px 0 75px;
+  @include max-screen(767px) {
+    padding: 40px 0 40px;
+  }
+  @include max-screen(575px) {
+    padding: 0;
+  }
+  background: url('../images/specials-bg.jpg') center/cover no-repeat;
+  .spec-item {
+    @include max-screen(767px) {
+      transform: scale(0.8);
+    }
+    a {
+      display: block;
+      color: #ffffff;
+      text-decoration: none;
+      font-family: "Sitka Heading";
+      font-weight: 700;
+      font-size: 24px;
+      &:first-of-type {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 4px solid #ffffff;
+        background-color: gray;
+        overflow: hidden;
+        display: inline-block;
+        cursor: pointer;
+        margin-bottom: 10px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
+
 //WINE
 .wine {
   background: url('../images/bring-block-bg.jpg') center center/cover no-repeat;
-  padding: 8% 0;
+  padding: 10% 0;
   .wine-text {
     display: inline-block;
     color: #ffffff;
@@ -369,6 +408,99 @@ header {
   }
 }
 
+.newsletter {
+  background: url('../images/newslatter-bg.jpg') center/cover no-repeat;
+  padding: 75px 0;
+  font-family: "St Ryde";
+  font-weight: 400;
+  line-height: 0.8;
+  @include max-screen(991px) {
+    padding: 55px 0;
+  }
+  @include max-screen(767px) {
+    padding: 30px 0;
+  }
+  @include max-screen(575px) {
+    padding: 20px 0;
+  }
+  h3 {
+    font-size: 30px;
+    color: #ab1612;
+    margin: 0 0 15px 0;
+    @include max-screen(767px) {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    @include max-screen(575px) {
+      font-size: 13px;
+      margin-bottom: 7px;
+    }
+  }
+  p {
+    font-size: 18px;
+    margin: 0 0 15px 0;
+    @include max-screen(767px) {
+      font-size: 13px;
+      margin-bottom: 10px;
+    }
+    @include max-screen(575px) {
+      font-size: 8px;
+      margin-bottom: 7px;
+    }
+  }
+  input {
+    width: 66%;
+    display: inline-block;
+    margin: 0;
+    background-color: #e2e2e2;
+    border: none;
+    font-size: 15px;
+    padding: 20px 18px 18px;
+    outline: none;
+    position: relative;
+    left: 6px;
+    @include max-screen(767px) {
+      width: 70%;
+      margin-bottom: 10px;
+      padding: 13px 13px 11px;
+      font-size: 11px;
+      left: 0;
+    }
+    @include max-screen(575px) {
+      width: initial;
+      margin-bottom: 7px;
+      padding: 5px 5px 5px;
+      font-size: 7px;
+      min-width: 200px;
+    }
+  }
+  button {
+    width: 33%;
+    display: inline-block;
+    margin: 0;
+    position: relative;
+    left: -6px;
+    font-size: 20px;
+    border: none;
+    background-color: #94dd2c;
+    color: white;
+    border-radius: 12px;
+    padding: 19px 0 21px;
+    @include max-screen(767px) {
+      width: initial;
+      padding: 10px 40px;
+      left: 0;
+      font-size: 14px;
+      display: block;
+      margin: auto;
+    }
+    @include max-screen(575px) {
+      border-radius: 4px;
+      padding: 6px 25px;
+      font-size: 9px;
+    }
+  }
+}
 
 
 //FOOTER
