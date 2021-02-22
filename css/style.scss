@@ -12,6 +12,7 @@
 //COLLAPSE ICON
 .navbar-toggler {
   border: none;
+
   &.collapsed {
     .navbar-toggler-icon {
       &:after {
@@ -20,6 +21,7 @@
       }
     }
   }
+
   .navbar-toggler-icon {
     width: inherit;
     height: inherit;
@@ -28,6 +30,7 @@
     border-radius: 50%;
     padding: 6px 12px;
     opacity: 0.8;
+
     &:after {
       background: none;
       content: "\f077";
@@ -46,11 +49,9 @@
 
 //HEADER
 header {
-  background: url("../images/header_bg.jpg") top center no-repeat;
-  background-size: 100%;
+  background: url("../images/header_bg.jpg") #c11915 top center/100% no-repeat;
   position: relative;
   z-index: 2;
-  background-color: #c11915;
 
   &:after {
     content: "";
@@ -60,136 +61,136 @@ header {
     position: absolute;
     width: 100%;
     height: 100%;
+    margin-top: -2px;
   }
 
   .navbar {
     padding: 40px 30px 10px;
+    //padding: 55px 55px 15px;
+  }
 
-    .navbar-brand {
-      max-width: 230px;
-      padding: 0;
-      @include max-screen(1199px) {
-        max-width: 205px;
-      }
-      @include max-screen(767px) {
-        max-width: 160px;
-      }
-
-      img {
-        width: 100%;
-      }
+  .navbar-brand {
+    max-width: 230px;
+    padding: 0;
+    @include max-screen(1199px) {
+      max-width: 205px;
+    }
+    @include max-screen(767px) {
+      max-width: 160px;
     }
 
-    .navbar-collapse {
-      .navbar-nav {
-        .nav-item {
-          margin: 10px 0 5px 50px;
+    img {
+      width: 100%;
+    }
+  }
+
+  .navbar-collapse {
+    .navbar-nav {
+      .nav-item {
+        margin: 10px 0 5px 50px;
+        @include max-screen(1199px) {
+          margin-left: 30px;
+        }
+        @include max-screen(991px) {
+          margin: 0 13%;
+          &:first-of-type {
+            margin-top: 30px;
+          }
+        }
+
+        .nav-link {
+          color: #fff;
+          opacity: 0.7;
+          font-family: "Sitka Small";
+          font-weight: 700;
+          font-size: 15px;
+          padding: 0;
+          transition: 0.5s;
           @include max-screen(1199px) {
-            margin-left: 30px;
+            font-size: 13px;
           }
           @include max-screen(991px) {
-            margin: 0 13%;
-            &:first-of-type {
-              margin-top: 30px;
-            }
+            text-align: center;
+            padding: 10px 0 5px;
+            border-bottom: 2px dotted #fff;
           }
+        }
 
+        &:after {
+          content: "";
+          display: block;
+          width: 0;
+          height: 4px;
+          background-color: #fff;
+          transition: 0.5s ease-in-out;
+          @include max-screen(991px) {
+            display: none;
+          }
+        }
+
+        &.active, &:hover {
           .nav-link {
-            color: #fff;
-            opacity: 0.7;
-            font-family: "Sitka Small";
-            font-weight: 700;
-            font-size: 15px;
-            padding: 0;
-            transition: 0.5s;
-            @include max-screen(1199px) {
-              font-size: 13px;
-            }
-            @include max-screen(991px) {
-              text-align: center;
-              padding: 10px 0 5px;
-              border-bottom: 2px dotted #fff;
-            }
-            @include max-screen(767px) {
-            }
+            opacity: 1;
+            transition: 0.4s;
           }
 
           &:after {
-            content: "";
-            display: block;
-            width: 0;
-            height: 4px;
-            background-color: #fff;
-            transition: 0.5s ease-in-out;
-            @include max-screen(991px) {
-              display: none;
-            }
+            width: 100%;
+            transition: 0.4s ease-in-out;
+          }
+        }
+
+        &:last-of-type {
+          margin-top: 5px;
+          @include max-screen(991px) {
+            margin: 20px 13% 0 auto;
+          }
+          @include max-screen(767px) {
+            margin-right: auto;
           }
 
-          &.active, &:hover {
-            .nav-link {
-              opacity: 1;
-              transition: 0.4s;
+          &:after {
+            display: none;
+          }
+
+          .nav-link {
+            max-width: 120px;
+            position: relative;
+            opacity: 1;
+            @include max-screen(1199px) {
+              max-width: 110px;
+            }
+            @include max-screen(991px) {
+              max-width: 130px;
+              border: none;
+            }
+
+            img {
+              width: 80%;
+              display: inline-block;
+              @include max-screen(991px) {
+                width: 75%;
+                margin-right: 20px;
+              }
             }
 
             &:after {
-              width: 100%;
-              transition: 0.4s ease-in-out;
-            }
-          }
-
-          &:last-of-type {
-            margin-top: 5px;
-            @include max-screen(991px) {
-              margin: 20px 13% 0 auto;
-            }
-            @include max-screen(767px) {
-              margin-right: auto;
-            }
-
-            &:after {
-              display: none;
-            }
-
-            .nav-link {
-              max-width: 120px;
-              position: relative;
-              opacity: 1;
+              content: "\f39e";
+              display: inline-block;
+              font-family: "Font Awesome 5 Brands";
+              font-weight: 900;
+              color: white;
+              position: absolute;
+              right: 0;
+              font-size: 23px;
+              line-height: 23px;
               @include max-screen(1199px) {
-                max-width: 110px;
+                font-size: 20px;
+                line-height: 20px;
               }
               @include max-screen(991px) {
-                max-width: 130px;
-                border: none;
-              }
-
-              img {
-                width: 80%;
-                display: inline-block;
-                @include max-screen(991px) {
-                  width: 75%;
-                  margin-right: 20px;
-                }
-              }
-
-              &:after {
-                content: "\f39e";
-                display: inline-block;
-                font-family: "Font Awesome 5 Brands";
-                font-weight: 900;
-                color: white;
-                position: absolute;
-                right: 0;
-                font-size: 23px;
-                line-height: 23px;
-                @include max-screen(1199px) {
-                  font-size: 20px;
-                  line-height: 20px;
-                }
-                @include max-screen(991px) {
-                  font-size: 26px;
-                  line-height: 26px;
-                }
+                font-size: 26px;
+                line-height: 26px;
               }
             }
           }
@@ -198,43 +199,109 @@ header {
     }
   }
 }
+
 
 //BANNER
 .banner {
   position: relative;
   z-index: 1;
-  top: -20px;
+  margin-top: -10px;
 
-  .position-absolute {
-    top: 100px;
-  }
+  .banner_els {
+    top: 0;
+    font-family: "St Ryde";
+    font-weight: 400;
+    margin-top: 13%;
+    @include max-screen(1199px) {
+      margin-top: 11%;
+    }
+    @include max-screen(575px) {
+      margin-top: 10%;
+    }
 
-  .container {
-    .row {
-      .col-md-6 {
-        .banner-logo {
-          max-width: 470px;
+    .banner_inner {
+      @include max-screen(991px) {
+        margin-left: 5%;
+      }
+      @include max-screen(575px) {
+        margin-left: 3%;
+      }
 
-          img {
-            width: 100%;
-            margin-bottom: 65px;
-          }
+      img {
+        margin: 0 auto 50px;
+        max-width: 470px;
+        display: inline-block;
+        @include max-screen(1199px) {
+          margin-bottom: 40px;
+          max-width: 370px;
         }
+        @include max-screen(991px) {
+          margin-bottom: 30px;
+          max-width: 300px;
+        }
+        @include max-screen(767px) {
+          margin-bottom: 20px;
+          max-width: 235px;
+        }
+        @include max-screen(575px) {
+          margin-bottom: 9%;
+          max-width: 160px;
+        }
+      }
 
-        .banner-button {
-          text-decoration: none;
-          color: #fff;
-          padding: 23px 32px;
-          background-color: #94dd2c;
-          border-radius: 3px;
-          font-size: 29px;
-          margin-bottom: 25px;
+      a {
+        background-color: #94dd2c;
+        color: white;
+        padding: 20px 51px;
+        font-size: 30px;
+        display: inline-block;
+        text-decoration: none;
+        margin-bottom: 20px;
+        border-radius: 7px;
+        @include max-screen(1199px) {
+          padding: 16px 41px;
+          font-size: 24px;
+          margin-bottom: 15px;
+        }
+        @include max-screen(991px) {
+          padding: 15px 36px;
+          margin-bottom: 0.5rem;
+          font-size: 19px;
+        }
+        @include max-screen(767px) {
+          padding: 11px 29px;
+          margin-bottom: 0.25rem;
+          font-size: 12px;
+        }
+        @include max-screen(575px) {
+          padding: 7px 20px;
+          font-size: 8px;
+        }
+      }
+
+      p {
+        font-size: 18px;
+        padding-right: 25px;
+        color: #c31915;
+        @include max-screen(1199px) {
+          font-size: 15px;
+        }
+        @include max-screen(991px) {
+          font-size: 12px;
+        }
+        @include max-screen(767px) {
+          font-size: 9px;
+        }
+        @include max-screen(575px) {
+          display: none;
         }
       }
     }
   }
 }
 
+
+//FOOTER
 footer {
   background-color: #000;
   //padding: 30px;
