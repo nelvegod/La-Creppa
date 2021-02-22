@@ -323,12 +323,36 @@ header .navbar-collapse .navbar-nav .nav-item:last-of-type .nav-link:after {
 }
 @media screen and (max-width: 575px) {
   .specials {
-    padding: 0;
+    padding: 20px 0;
   }
 }
 @media screen and (max-width: 767px) {
   .specials .spec-item {
-    transform: scale(0.8);
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .specials .spec-item {
+    margin-bottom: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .specials .spec-item:first-of-type .spec-item_title, .specials .spec-item:last-of-type .spec-item_title {
+    position: relative;
+    top: 39px;
+    right: 3px;
+  }
+  .specials .spec-item:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+  .specials .spec-item:nth-child(2) .spec-item_title {
+    position: relative;
+    top: 39px;
+    left: 3px;
+  }
+  .specials .spec-item:nth-child(2), .specials .spec-item:last-of-type {
+    margin-top: -40px;
   }
 }
 .specials .spec-item a {
@@ -338,6 +362,12 @@ header .navbar-collapse .navbar-nav .nav-item:last-of-type .nav-link:after {
   font-family: "Sitka Heading";
   font-weight: 700;
   font-size: 24px;
+  line-height: 0.8;
+}
+@media screen and (max-width: 575px) {
+  .specials .spec-item a {
+    font-size: 16px;
+  }
 }
 .specials .spec-item a:first-of-type {
   width: 200px;
@@ -349,6 +379,21 @@ header .navbar-collapse .navbar-nav .nav-item:last-of-type .nav-link:after {
   display: inline-block;
   cursor: pointer;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .specials .spec-item a:first-of-type {
+    width: 150px;
+    height: 150px;
+    border-width: 3px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .specials .spec-item a:first-of-type {
+    width: 100px;
+    height: 100px;
+    border-width: 2px;
+    margin: 0;
+  }
 }
 .specials .spec-item a img {
   width: 100%;

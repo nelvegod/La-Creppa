@@ -303,12 +303,38 @@ header {
     padding: 40px 0 40px;
   }
   @include max-screen(575px) {
-    padding: 0;
+    padding: 20px 0;
   }
   background: url('../images/specials-bg.jpg') center/cover no-repeat;
   .spec-item {
     @include max-screen(767px) {
-      transform: scale(0.8);
+      margin-bottom: 20px;
+    }
+    @include max-screen(575px) {
+      margin-bottom: 0;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      &:first-of-type,
+      &:last-of-type {
+        .spec-item_title {
+          position: relative;
+          top: 39px;
+          right: 3px;
+        }
+      }
+      &:nth-child(2) {
+        flex-direction: row-reverse;
+        .spec-item_title {
+          position: relative;
+          top: 39px;
+          left: 3px;
+        }
+      }
+      &:nth-child(2),
+      &:last-of-type {
+        margin-top: -40px;
+      }
     }
     a {
       display: block;
@@ -317,6 +343,10 @@ header {
       font-family: "Sitka Heading";
       font-weight: 700;
       font-size: 24px;
+      line-height: 0.8;
+      @include max-screen(575px) {
+        font-size: 16px;
+      }
       &:first-of-type {
         width: 200px;
         height: 200px;
@@ -327,6 +357,17 @@ header {
         display: inline-block;
         cursor: pointer;
         margin-bottom: 10px;
+        @include max-screen(767px) {
+          width: 150px;
+          height: 150px;
+          border-width: 3px;
+        }
+        @include max-screen(575px) {
+          width: 100px;
+          height: 100px;
+          border-width: 2px;
+          margin: 0;
+        }
       }
       img {
         width: 100%;
